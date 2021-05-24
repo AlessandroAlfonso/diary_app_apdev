@@ -109,10 +109,6 @@ const rendFunctions = {
 						fName: fName,
 						lName: lName,
 						bio: bio,
-						avatar: {
-							data: fs.readFileSync(req.file.path).toString('base64'),
-							contentType: req.file.mimetype,
-						},
 					};
 					db.insertOne(Profile, user, function (flag) {
 						console.log(req.session);
